@@ -28,7 +28,7 @@ public class SecurityConfig {
                     req.anyRequest().authenticated();
                 })
                 .formLogin(form -> form.loginPage("/login")
-                        .defaultSuccessUrl("/home", true)
+                        .defaultSuccessUrl("/produtolista", true)
                         .permitAll())
                 .logout(logout -> logout.logoutSuccessUrl("/login?logout").permitAll())
                 .build();
@@ -38,6 +38,7 @@ public class SecurityConfig {
     public RoleHierarchy roleHierarchy() {
         return RoleHierarchyImpl.fromHierarchy("ADMINISTRADOR > OPERADOR");
     }
+
 
     @Bean
     public PasswordEncoder codificarSenha() {

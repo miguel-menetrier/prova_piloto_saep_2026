@@ -2,7 +2,6 @@ package com.saep.provapratica.dto;
 
 import com.saep.provapratica.infra.Cargo;
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data

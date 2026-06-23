@@ -16,13 +16,11 @@ public class UsuarioController {
 
     @PostMapping("/cadastro")
     public String cadastrarUsuario(@Valid @ModelAttribute("usuarioDto") UsuarioRequisicaoDto usuarioDto) {
-        System.out.println("ok1");
 
         service.cadastrarUsuario(usuarioDto);
 
-        System.out.println("ok2");
 
-        return "redirect:/usuariolista";
+        return "redirect:/login?sucesso";
 
     }
 }
